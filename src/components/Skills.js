@@ -1,16 +1,13 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
+import { FaPython, FaReact, FaCss3Alt, FaJs, FaNodeJs } from "react-icons/fa"; // Web Dev Icons
+import { DiDjango } from "react-icons/di"; // Django Icon
+import { SiAdobephotoshop, SiAdobeillustrator, SiAdobeindesign } from "react-icons/si"; // Graphic Design Icons
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -35,30 +32,55 @@ export const Skills = () => {
                 <div className="col-12">
                     <div className="skill-bx wow zoomIn">
                         <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+                        <p>Here are some of the skills and technologies I work with.</p>
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+
+                            {/* Web Development Skills */}
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <FaPython size={80} color="#306998" />
+                                <h5>Python</h5>
                             </div>
                             <div className="item">
-                                <img src={meter2} alt="Image" />
-                                <h5>Brand Identity</h5>
+                                <FaReact size={80} color="#61DAFB" />
+                                <h5>React</h5>
                             </div>
                             <div className="item">
-                                <img src={meter3} alt="Image" />
-                                <h5>Logo Design</h5>
+                                <FaCss3Alt size={80} color="#1572B6" />
+                                <h5>CSS</h5>
                             </div>
                             <div className="item">
-                                <img src={meter1} alt="Image" />
-                                <h5>Web Development</h5>
+                                <FaJs size={80} color="#F7DF1E" />
+                                <h5>JavaScript</h5>
                             </div>
+                            <div className="item">
+                                <FaNodeJs size={80} color="#68A063" />
+                                <h5>Node.js</h5>
+                            </div>
+                            <div className="item">
+                                <DiDjango size={80} color="#092E20" />
+                                <h5>Django</h5>
+                            </div>
+
+                            {/* Graphic Design Skills */}
+                            <div className="item">
+                                <SiAdobephotoshop size={80} color="#31A8FF" />
+                                <h5>Photoshop</h5>
+                            </div>
+                            <div className="item">
+                                <SiAdobeillustrator size={80} color="#FF9A00" />
+                                <h5>Illustrator</h5>
+                            </div>
+                            <div className="item">
+                                <SiAdobeindesign size={80} color="#FF3366" />
+                                <h5>InDesign</h5>
+                            </div>
+
                         </Carousel>
                     </div>
                 </div>
             </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Image" />
+        <img className="background-image-left" src={colorSharp} alt="Background" />
     </section>
   )
 }
